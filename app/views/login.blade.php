@@ -55,7 +55,7 @@
                             Your Error Message goes here
                         </div>
                         <!-- END ERROR BOX -->
-                        <form action="login.html#" method="post">
+                        <form action="login.html#" method="post">                        
                             <input type="text" placeholder="Usuario" class="input-field form-control user" />
                             <input type="password" placeholder="Contraseña" class="input-field form-control password" />
                             <button id="submit-form" class="btn btn-login ladda-button" data-style="expand-left"><span class="ladda-label">login</span></button>

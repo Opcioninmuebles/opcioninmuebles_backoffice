@@ -5,13 +5,24 @@ class AuthController extends \BaseController {
 
 	/**
 	 * Display a login.
-	 * GET /login
+	 * GET /index
 	 *
-	 * @return Response
+	 * @return View
 	 */
-	public function login()
+	public function index()
 	{
 		return View::make('login');
 	}
 
+	
+	/**
+	 * User Authentication.
+	 * POST /login
+	 *
+	 * @return View
+	 */
+	public function login()
+	{
+		dd('llego');
+	}
 }

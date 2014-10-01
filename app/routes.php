@@ -11,4 +11,6 @@
 |
 */
 
-Route::get('/login', [ 'as' => 'login', 'uses' => 'AuthController@login' ] );
+Route::get('/login', [ 'as' => 'login', 'uses' => 'AuthController@index' ] );
+
+Route::post('login', ['as' => 'login', 'uses' => 'AuthController@login']);
