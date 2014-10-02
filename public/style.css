@@ -13,16 +13,9 @@ body{
 	color: #fff;
 }
 
-a.navbar-brand{
-	padding: 0;
-}
-
-.container{
-    float: right;	
-}
-
-.containerAccount{
-    float: center;	
+.align-center
+{
+	text-align: center;	
 }
 
 .container>.navbar-header, .container-fluid>.navbar-header, .container>.navbar-collapse, .container-fluid>.navbar-collapse{

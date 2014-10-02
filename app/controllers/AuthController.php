@@ -23,6 +23,20 @@ class AuthController extends \BaseController {
 	 */
 	public function login()
 	{
-		dd('llego');
+		$data = Input::only('useremail','password');
+		
+		$credentials = [
+			'email' => $data['useremail'],
+			'password'=> $data['password']
+		];
+		
+		//si las credenciales son validas
+		if(Auth::attempt($credentials))
+		{
+			return Redirect::route('admin');
+			//return Redirect::back();
+		}
+		return Redirect::to('/login')->with('login_error',1);
+		
 	}
 }

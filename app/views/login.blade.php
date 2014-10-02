@@ -39,11 +39,11 @@
             <div class="col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4">
                 <div class="login-box clearfix animated flipInY">
                     <div class="page-icon animated bounceInDown">
-                        <img src="assets/img/account/user-icon.png" alt="Key icon">
+                        <img src="{{ asset('assets/img/account/user-icon.png') }}" alt="Key icon">
                     </div>
                     <div class="login-logo">
                         <a href="login.html#?login-theme-3">
-                            <img src="assets/img/account/login-logo.png" alt="Company Logo">
+                            <img src="{{ asset('assets/img/account/login-logo.png') }}" alt="Company Logo">
                         </a>
                     </div>
                     <hr>
@@ -55,11 +55,25 @@
                             Your Error Message goes here
                         </div>
                         <!-- END ERROR BOX -->
-                        <form action="login.html#" method="post">                        
-                            <input type="text" placeholder="Usuario" class="input-field form-control user" />
-                            <input type="password" placeholder="Contraseña" class="input-field form-control password" />
-                            <button id="submit-form" class="btn btn-login ladda-button" data-style="expand-left"><span class="ladda-label">login</span></button>
-                        </form>
+                        
+                                                
+                        {{ Form::open(['route' => 'login', 'method' => 'POST', 'role' => 'form', 'novalidate']) }}
+			                <div class="form-group">
+			               		{{Form::email('useremail', null, ['class'=> 'form-control user', 'placeholder' => 'Email'])}}
+			                </div>
+			                <div class="form-group">
+			                    {{Form::password('password', ['class' => 'form-control password', 'placeholder' => 'Password'])}}
+			                </div>
+			             
+			                @if (Session::has('login_error'))
+			                	<div class="row align-center">
+                    				<span class="label label-danger">Credenciales no válidas</span>
+                    			</div>
+                			@endif
+			            
+			                <button type="submit" class="btn btn-login ladda-button" >Login</button>
+            			{{Form::close()}}
+            
                         <div class="login-links">
                             <a href="password_forgot.html">Olvidastes tu Password?</a>
                             <br>
@@ -69,6 +83,8 @@
                 </div>
             </div>
         </div>
+        
+        
     </div>
     <!-- END LOCKSCREEN BOX -->
     <!-- BEGIN MANDATORY SCRIPTS -->
@@ -85,19 +101,6 @@
     <script src="{{ asset('assets/js/account.js') }}"></script>
     <!-- END PAGE LEVEL SCRIPTS -->
 
-    <script>
-    $(function() {
-    $('#submit-form').click(function(e){
-        e.preventDefault();
-        var l = Ladda.create(this);
-        l.start();
-        setTimeout(function () {
-            window.location.href = "index.html";
-        }, 2000);
-
-    });
-});
-    </script>
 </body>
 
 </html>
