@@ -4,6 +4,7 @@
 <?php
 $nombre = Auth::user()->full_name;
 $user = strstr($nombre, ' ', true); 
+
 ?>
 
 <!-- BEGIN MAIN CONTENT -->
@@ -173,31 +174,9 @@ $user = strstr($nombre, ' ', true);
 			<div class="panel">
 				<div class="panel-body">
 					<div class="row">
-						<div class="col-xs-1 col-sm-10 col-sm-offset-2">
-							<h2>Hola <?=$user?>! Bienvenido a eShoppingProducer.</h2>
+						<div class="col-xs-12 col-sm-10 col-sm-offset-1">
+							<h2>Hola <?=$user?>! Bienvenido al BackOffice de Opción Inmuebles.</h2>
 						</div>					
-					</div>
-					<div class="row">
-						<figure class="col-xs-12 col-sm-4 col-sm-offset-0 col-md-3 col-md-offset-0">
-							<input type=image src="{{asset('assets/img/store/domains.jpg')}}" class="text-paddign-top">
-						</figure>
-						<figure class="col-xs-12 col-sm-4 col-sm-offset-1 col-md-3 col-md-offset-1">
-							<input type=image src="{{asset('assets/img/store/store.jpg')}}" class="text-paddign-top">
-						</figure>
-						<figure class="col-xs-12 col-sm-4 col-sm-offset-1 col-md-3 col-md-offset-1">
-							<input type=image src="{{asset('assets/img/store/store.jpg')}}" class="text-paddign-top">
-						</figure>
-					</div>
-					<div class="row">
-						<div class="col-sm-4 col-sm-offset-1 col-md-2">
-							<input type="submit" value="Comprar dominio" class="btn btn-info">
-						</div>
-						<div class="col-sm-4 col-sm-offset-2 col-md-2">
-							<input type="submit" value="Instalar Tienda" class="btn btn-info">
-						</div>
-						<div class="col-sm-4 col-sm-offset-2 col-md-2">
-							<input type="submit" value="Agregar Productos" class="btn btn-info">
-						</div>
 					</div>
 					<hr>
 					<div class="row">

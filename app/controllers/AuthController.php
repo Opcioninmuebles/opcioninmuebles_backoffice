@@ -39,4 +39,10 @@ class AuthController extends \BaseController {
 		return Redirect::to('/login')->with('login_error',1);
 		
 	}
+	
+	public function logout()
+	{
+		Auth::logout();
+		return Redirect::route('login');
+	}
 }

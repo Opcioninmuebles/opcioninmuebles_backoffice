@@ -67,6 +67,20 @@ App::down(function()
 	return Response::make("Be right back!", 503);
 });
 
+//Captura la excepcion en toda la aplicacion
+App::error(function (\OpcionInmuebles\Managers\ValidationException $exception) {
+	//dd(Session::get('redirect'));
+	return Redirect::to(URL::current())->withInput()->withErrors($exception->getErrors());
+});
+
+function is_admin()
+{
+	if(Auth::guest())
+		return false;
+
+	return  Auth::check() & Auth::user()->type == 'GeneralManager';
+}
+
 /*
 |--------------------------------------------------------------------------
 | Require The Filters File

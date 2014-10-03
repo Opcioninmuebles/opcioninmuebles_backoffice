@@ -727,7 +727,7 @@ a, a:focus, a:hover, a:active {
 }
 .navbar-inverse .navbar-brand {
     background: url('../img/logo.png') no-repeat center;
-    width: 120px;
+   	width: 9em;
 }
 .navbar-center {
     color: #bebebe;
@@ -879,7 +879,7 @@ a, a:focus, a:hover, a:active {
     background-color: #eaeaea;
 }
 .header-menu #user-header .dropdown-menu {
-    width: 178px;
+    width: 15em;
 }
 .header-menu #user-header .dropdown-menu li a {
     padding: 8px 15px;

@@ -15,4 +15,7 @@ Route::get('/login', [ 'as' => 'login', 'uses' => 'AuthController@index' ] );
 
 Route::post('login', ['as' => 'login', 'uses' => 'AuthController@login']);
 
+Route::get('/logout', [ 'as' => 'logout', 'uses' => 'AuthController@logout' ] );
+
+
 Route::get('admin',  ['as' => 'admin', 'uses' => 'AdminController@index']);

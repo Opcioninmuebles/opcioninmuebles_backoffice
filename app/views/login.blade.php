@@ -59,10 +59,10 @@
                                                 
                         {{ Form::open(['route' => 'login', 'method' => 'POST', 'role' => 'form', 'novalidate']) }}
 			                <div class="form-group">
-			               		{{Form::email('useremail', null, ['class'=> 'form-control user', 'placeholder' => 'Email'])}}
+			               		{{Form::email('useremail', null, ['class'=> 'input-field form-control user', 'placeholder' => 'Email'])}}
 			                </div>
 			                <div class="form-group">
-			                    {{Form::password('password', ['class' => 'form-control password', 'placeholder' => 'Password'])}}
+			                    {{Form::password('password', ['class' => 'input-field form-control password', 'placeholder' => 'Password'])}}
 			                </div>
 			             
 			                @if (Session::has('login_error'))
@@ -70,7 +70,7 @@
                     				<span class="label label-danger">Credenciales no válidas</span>
                     			</div>
                 			@endif
-			            
+                			
 			                <button type="submit" class="btn btn-login ladda-button" >Login</button>
             			{{Form::close()}}
             
