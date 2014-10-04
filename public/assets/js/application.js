@@ -30,7 +30,7 @@ Modernizr.addTest('retina', function () {
 
 Modernizr.load([{
     test: Modernizr.retina,
-    yep: '/backend/assets/plugins/retina.js'
+    yep: 'assets/plugins/retina.js'
 }]);
 
 
@@ -241,7 +241,7 @@ function chatSidebar() {
             var chat_message = '<li class="img">' +
                 '<span>' +
                 '<div class="chat-detail chat-right">' +
-                '<img src="/backend/assets/img/avatars/avatar1.png" data-retina-src="assets/img/avatars/avatar1_2x.png"/>' +
+                '<img src="assets/img/avatars/avatar1.png" data-retina-src="assets/img/avatars/avatar1_2x.png"/>' +
                 '<div class="chat-detail">' +
                 '<div class="chat-bubble">' +
                 $(this).val() +
@@ -290,10 +290,10 @@ $('.theme-color').click(function (e) {
 /* If skin color selected in menu, we display it */
 if($.cookie('style-color')){
     var color_ = 'color-'+$.cookie('style-color');
-    $('#theme-color').attr("href", "/assets/css/colors/" + color_ + ".css");
+    $('#theme-color').attr("href", "assets/css/colors/" + color_ + ".css");
 }
 else{
-    $('#theme-color').attr("href", "/assets/css/colors/color-dark.css");
+    $('#theme-color').attr("href", "assets/css/colors/color-dark.css");
 }
 
 //*********************************** CUSTOM FUNCTIONS *****************************//
@@ -390,12 +390,13 @@ if ($('.animate-number').length && $.fn.numerator) {
 
 /****  Custom Select Input  ****/
 if ($('select').length && $.fn.selectpicker) {
+  setTimeout(function(){
     $('select').selectpicker();
+  },50);
 }
-
 /****  Show Tooltip  ****/
-if ($('[rel="tooltip"]').length && $.fn.tooltip) {
-    $('[rel="tooltip"]').tooltip();
+if ($('[data-rel="tooltip"]').length && $.fn.tooltip) {
+    $('[data-rel="tooltip"]').tooltip();
 }
 
 /****  Show Popover  ****/
@@ -430,23 +431,31 @@ $('.toggle_checkbox').on('click', function () {
     } else {
         $(this).closest('#task-manager').find('input:checkbox').prop('checked', false);
     }
-
 });
+
+
+
+
 
 
 /****  Form Validation with Icons  ****/
 if ($('.icon-validation').length && $.fn.parsley) {
+
     $('.icon-validation').each(function () {
-        $(this).parsley({
-            listeners: {
-                onFieldSuccess: function (elem, constraints) {
-                    elem.prev().removeClass('fa-exclamation c-red').addClass('fa-check c-green');
-                },
-                onFieldError: function (elem, constraints) {
-                    elem.prev().removeClass('fa-check c-green').addClass('fa-exclamation c-red');
-                }
-            }
+
+        icon_validation = $(this);
+
+        $(this).parsley().subscribe('parsley:field:success', function (formInstance) {
+
+           formInstance.$element.prev().removeClass('fa-exclamation c-red').addClass('fa-check c-green');
+           
         });
+        $(this).parsley().subscribe('parsley:field:error', function (formInstance) {
+
+            formInstance.$element.prev().removeClass('fa-check c-green').addClass('fa-exclamation c-red');
+            
+        });
+
     });
 }
 
@@ -616,7 +625,7 @@ if ($('.table-dynamic').length && $.fn.dataTable) {
         if ($(this).hasClass('table-tools')) {
             opt.sDom = "<'row'<'col-md-6'f><'col-md-6'T>r>t<'row'<'col-md-6'i><'spcol-md-6an6'p>>",
             opt.oTableTools = {
-                "sSwfPath": "/backend/assets/plugins/datatables/swf/copy_csv_xls_pdf.swf",
+                "sSwfPath": "assets/plugins/datatables/swf/copy_csv_xls_pdf.swf",
                 "aButtons": ["csv", "xls", "pdf", "print"]
             };
         }
@@ -634,22 +643,35 @@ if ($('.table-dynamic').length && $.fn.dataTable) {
 }
 
 /****  Table progress bar  ****/
-if ($('body').data('page') == 'tables' || $('body').data('page') == 'products') {
+if ($('body').data('page') == 'tables' || $('body').data('page') == 'products' || $('body').data('page') == 'blog') {
     $('.progress-bar').progressbar();
 }
 
 /****  Gallery Images  ****/
 if ($('.gallery').length && $.fn.mixItUp) {
     $('.gallery').each(function () {
+
         $(this).mixItUp({
             animation: {
-                duration: 400,
-                effects: "fade", 
-                queueLimit: 3,
-                /* animateChangeLayout: true,*/
-                animateResizeTargets: true
+                enable: false       
+            },
+            callbacks: {
+                onMixLoad: function(){
+                    $('.mix').hide();
+                    $(this).mixItUp('setOptions', {
+                        animation: {
+                            enable: true,
+                            effects: "fade", 
+                        },
+                    });
+                    $(window).bind("load", function() {
+                       $('.mix').fadeIn();
+                    });
+                }
             }
         });
+
+
     });
 }
 
@@ -666,7 +688,7 @@ if ($('.magnific').length && $.fn.magnificPopup) {
 
 
 /****  Initiation of Main Functions  ****/
-jQuery(document).ready(function () {
+$(document).ready(function () {
 
     manageSidebar();
     toggleSidebarMenu();

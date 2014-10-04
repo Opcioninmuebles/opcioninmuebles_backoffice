@@ -3,7 +3,6 @@
 use OpcionInmuebles\Entities\City;
 
 class CityTableSeeder extends Seeder {
-
 	public function run()
 	{
 		City::create([
@@ -11,11 +10,11 @@ class CityTableSeeder extends Seeder {
 		]);
 
 		City::create([
-			'name' => 'Bogotá'
+			'name' => 'Bogotï¿½'
 		]);
 		
 		City::create([
-			'name' => 'Medellín'
+			'name' => 'Medellï¿½n'
 		]);	
 	}
 }

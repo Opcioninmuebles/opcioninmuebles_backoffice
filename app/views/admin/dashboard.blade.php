@@ -21,8 +21,8 @@
     <link href="{{ asset('assets/plugins/fullcalendar/fullcalendar.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/plugins/metrojs/metrojs.css') }}" rel="stylesheet">
     <!-- END PAGE LEVEL STYLE -->
-    <script src="{{ asset('assets/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js') }}"></script>
     
+    <script src="{{ asset('assets/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js') }}"></script>
 </head>
 
 <body data-page="dashboard">
@@ -314,7 +314,7 @@
  	@yield('scripts')
     <!-- END CHAT MENU -->
     <!-- BEGIN MANDATORY SCRIPTS -->
-    <script src="{{ asset('assets/plugins/mandatoryJs.min.js') }}"></script>
+   <script src="{{ asset('assets/plugins/mandatoryJs.min.js') }}"></script>
     <!-- END MANDATORY SCRIPTS -->
     <!-- BEGIN PAGE LEVEL SCRIPTS -->
     <script src="{{ asset('assets/plugins/metrojs/metrojs.min.js') }}"></script>
@@ -332,9 +332,9 @@
     <script src="{{ asset('assets/plugins/charts-morris/morris.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js') }}"></script>
     <script src="{{ asset('assets/js/calendar.js') }}"></script>
+    <script src="{{ asset('assets/js/application.js') }}"></script>
     <script src="{{ asset('assets/js/dashboard.js') }}"></script>
     <!-- END  PAGE LEVEL SCRIPTS -->
-    <script src="{{ asset('assets/js/application.js') }}"></script>
 </body>
 
 </html>

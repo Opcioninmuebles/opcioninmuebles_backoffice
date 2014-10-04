@@ -504,22 +504,22 @@ $(function () {
             $(".weather-city").html(city);
             $(".weather-currently").html(weather.currently);
             $(".today-img").html('<i class="big-img-weather icon-' + weather.code + '"></i>');
-            $(".today-temp").html(weather.low + '° / ' + weather.high + '°');
+            $(".today-temp").html(weather.low + 'Â° / ' + weather.high + 'Â°');
             $(".weather-region").html(region);
             $(".weather-day").html(tomorrow_date);
             $(".weather-icon").html(weather_icon);
             $(".1-days-day").html(weather.forecasts.one.day);
             $(".1-days-image").html('<i class="icon-' + weather.forecasts.one.code + '"></i>');
-            $(".1-days-temp").html(weather.forecasts.one.low + '° / ' + weather.forecasts.one.high + '°');
+            $(".1-days-temp").html(weather.forecasts.one.low + 'Â° / ' + weather.forecasts.one.high + 'Â°');
             $(".2-days-day").html(weather.forecasts.two.day);
             $(".2-days-image").html('<i class="icon-' + weather.forecasts.two.code + '"></i>');
-            $(".2-days-temp").html(weather.forecasts.two.low + '° / ' + weather.forecasts.two.high + '°');
+            $(".2-days-temp").html(weather.forecasts.two.low + 'Â° / ' + weather.forecasts.two.high + 'Â°');
             $(".3-days-day").html(weather.forecasts.three.day);
             $(".3-days-image").html('<i class="icon-' + weather.forecasts.three.code + '"></i>');
-            $(".3-days-temp").html(weather.forecasts.three.low + '° / ' + weather.forecasts.three.high + '°');
+            $(".3-days-temp").html(weather.forecasts.three.low + 'Â° / ' + weather.forecasts.three.high + 'Â°');
             $(".4-days-day").html(weather.forecasts.four.day);
             $(".4-days-image").html('<i class="icon-' + weather.forecasts.four.code + '"></i>');
-            $(".4-days-temp").html(weather.forecasts.four.low + '° / ' + weather.forecasts.four.high + '°');
+            $(".4-days-temp").html(weather.forecasts.four.low + 'Â° / ' + weather.forecasts.four.high + 'Â°');
         }
     });
 
@@ -538,22 +538,22 @@ $(function () {
                 $(".weather-city").html(city);
                 $(".weather-currently").html(weather.currently);
                 $(".today-img").html('<i class="big-img-weather icon-' + weather.code + '"></i>');
-                $(".today-temp").html(weather.low + '° / ' + weather.high + '°');
+                $(".today-temp").html(weather.low + 'Â° / ' + weather.high + 'Â°');
                 $(".weather-region").html(region);
                 $(".weather-day").html(tomorrow_date);
                 $(".weather-icon").html(weather_icon);
                 $(".1-days-day").html(weather.forecasts.one.day);
                 $(".1-days-image").html('<i class="icon-' + weather.forecasts.one.code + '"></i>');
-                $(".1-days-temp").html(weather.forecasts.one.low + '° / ' + weather.forecasts.one.high + '°');
+                $(".1-days-temp").html(weather.forecasts.one.low + 'Â° / ' + weather.forecasts.one.high + 'Â°');
                 $(".2-days-day").html(weather.forecasts.two.day);
                 $(".2-days-image").html('<i class="icon-' + weather.forecasts.two.code + '"></i>');
-                $(".2-days-temp").html(weather.forecasts.two.low + '° / ' + weather.forecasts.two.high + '°');
+                $(".2-days-temp").html(weather.forecasts.two.low + 'Â° / ' + weather.forecasts.two.high + 'Â°');
                 $(".3-days-day").html(weather.forecasts.three.day);
                 $(".3-days-image").html('<i class="icon-' + weather.forecasts.three.code + '"></i>');
-                $(".3-days-temp").html(weather.forecasts.three.low + '° / ' + weather.forecasts.three.high + '°');
+                $(".3-days-temp").html(weather.forecasts.three.low + 'Â° / ' + weather.forecasts.three.high + 'Â°');
                 $(".4-days-day").html(weather.forecasts.four.day);
                 $(".4-days-image").html('<i class="icon-' + weather.forecasts.four.code + '"></i>');
-                $(".4-days-temp").html(weather.forecasts.four.low + '° / ' + weather.forecasts.four.high + '°');
+                $(".4-days-temp").html(weather.forecasts.four.low + 'Â° / ' + weather.forecasts.four.high + 'Â°');
             }
         });
     });
