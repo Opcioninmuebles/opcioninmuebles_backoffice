@@ -144,7 +144,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="{{ route('account') }}">
                                     <i class="glyph-icon flaticon-settings21"></i> Configuración de Cuenta
                                 </a>
                             </li>
@@ -152,7 +152,7 @@
                                 <a href="javascript:;" class="toggle_fullscreen" title="Fullscreen">
                                     <i class="glyph-icon flaticon-fullscreen3"></i>
                                 </a>
-                                <a href="lockscreen.html" title="Lock Screen">
+                                <a href="{{ route('lockscreen') }}" title="Lock Screen">
                                     <i class="glyph-icon flaticon-padlock23"></i>
                                 </a>
                                 <a href="{{ route('logout') }}" title="Logout">
@@ -200,7 +200,7 @@
                                 <a href="#"><span class="sidebar-text">Mi Perfil</span></a>
                             </li>
                             <li>
-                                <a href="login.html"><span class="sidebar-text">Configuración de Cuenta</span></a>
+                                <a href="{{ route('account') }}"><span class="sidebar-text">Configuración de Cuenta</span></a>
                             </li>
                             <li>
                                 <a href="signup.html"><span class="sidebar-text">Registrar Usuarios</span></a>
@@ -209,7 +209,7 @@
                                 <a href="password_forgot.html"><span class="sidebar-text">Recuperar Contraseña</span></a>
                             </li>
                             <li>
-                                <a href="lockscreen.html"><span class="sidebar-text">Lockscreen</span></a>
+                                <a href="{{ route('lockscreen') }}"><span class="sidebar-text">Lockscreen</span></a>
                             </li>
                             <li>
                                 <a href="{{ route('logout') }}"><span class="sidebar-text">Logout</span></a>
@@ -300,7 +300,7 @@
                 <div class="sidebar-footer clearfix">
                     <a class="pull-left" href="profil_edit.html" rel="tooltip" data-placement="top" data-original-title="Settings"><i class="glyph-icon flaticon-settings21"></i></a>
                     <a class="pull-left toggle_fullscreen" href="index.html#" rel="tooltip" data-placement="top" data-original-title="Fullscreen"><i class="glyph-icon flaticon-fullscreen3"></i></a>
-                    <a class="pull-left" href="lockscreen.html" rel="tooltip" data-placement="top" data-original-title="Lockscreen"><i class="glyph-icon flaticon-padlock23"></i></a>
+                    <a class="pull-left" href="{{ route('lockscreen') }}" rel="tooltip" data-placement="top" data-original-title="Lockscreen"><i class="glyph-icon flaticon-padlock23"></i></a>
                     <a class="pull-left" href="{{ route('logout') }}" rel="tooltip" data-placement="top" data-original-title="Logout"><i class="fa fa-power-off"></i></a>
                 </div> 
             </div>

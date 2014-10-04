@@ -1,7 +1,7 @@
 <?php namespace OpcionInmuebles\Components;
 
 use Illuminate\Support\ServiceProvider;
-use ShoppyProducer\Components\FieldBuilder;
+use OpcionInmuebles\Components\FieldBuilder;
 
 class FieldServiceProvider extends ServiceProvider {
 	

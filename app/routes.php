@@ -15,7 +15,20 @@ Route::get('/login', [ 'as' => 'login', 'uses' => 'AuthController@index' ] );
 
 Route::post('login', ['as' => 'login', 'uses' => 'AuthController@login']);
 
-Route::get('/logout', [ 'as' => 'logout', 'uses' => 'AuthController@logout' ] );
+Route::get('admin/users/account', ['as' => 'account', 'uses' => 'UsersController@account']);
+//Actualizar usuario
+Route::put('admin/users/account', ['as' => 'update_account', 'uses' => 'UsersController@updateAccount']);
 
+//Formularios
+//si el usuario no esta conectado impido el acceso a las rutas
+Route::group(['before' => 'auth'], function()
+{
+	require (__DIR__ . '/routes/auth.php');
 
-Route::get('admin',  ['as' => 'admin', 'uses' => 'AdminController@index']);
+	//Admin Routes
+	Route::group(['before' => 'is_admin'], function()
+	{
+		require (__DIR__ . '/routes/admin.php');
+	});
+
+});

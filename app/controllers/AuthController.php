@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Auth\AuthManager;
 class AuthController extends \BaseController {
 
 	/**
@@ -11,7 +13,7 @@ class AuthController extends \BaseController {
 	 */
 	public function index()
 	{
-		return View::make('login');
+		return \View::make('login');
 	}
 
 	
@@ -23,26 +25,46 @@ class AuthController extends \BaseController {
 	 */
 	public function login()
 	{
-		$data = Input::only('useremail','password');
-		
-		$credentials = [
-			'email' => $data['useremail'],
-			'password'=> $data['password']
-		];
-		
-		//si las credenciales son validas
-		if(Auth::attempt($credentials))
-		{
-			return Redirect::route('admin');
-			//return Redirect::back();
-		}
-		return Redirect::to('/login')->with('login_error',1);
-		
+		return $this->checkCredentials(false);
 	}
 	
 	public function logout()
 	{
 		Auth::logout();
 		return Redirect::route('login');
+	}
+	
+	public function lockscreen()
+	{
+		return \View::make('lockscreen');
+	}
+	
+	public function unlockscreen()
+	{
+		return $this->checkCredentials(true);
+	}
+	
+	private function checkCredentials($lock)
+	{				
+		$data = Input::only('useremail','password');
+		$credentials = [
+		'email' => $data['useremail'],
+		'password'=> $data['password']
+		];
+	
+		//si las credenciales son validas
+		if(Auth::attempt($credentials))
+		{
+			return Redirect::route('admin');
+		}
+		
+		if(!$lock)
+		{
+			return Redirect::to('/login')->with('login_error',1);
+		}
+		else 
+		{
+			return Redirect::to('/lockscreen')->with('login_error',1);
+		}	
 	}
 }

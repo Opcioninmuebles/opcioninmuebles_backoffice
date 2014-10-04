@@ -191,7 +191,7 @@ return array(
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
 		//Custom
-		'Field'			  => 'ShoppyProducer\Components\Field',
+		'Field'			  => 'OpcionInmuebles\Components\Field',
 	),
 
 );
