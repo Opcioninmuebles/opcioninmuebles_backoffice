@@ -32,3 +32,18 @@ Route::group(['before' => 'auth'], function()
 	});
 
 });
+
+// Joel Dutour,
+Route::get('admin/users/registrer', ['as' => 'registrer', 'uses' => 'UsersController@registrer']);
+//Registrer user
+Route::put('admin/users/registrer', ['as' => 'update_registrer', 'uses' => 'UsersController@updateRegistrer']);
+
+
+
+
+Route::get("usuarios/cities/", function(){
+	$results = DB::select('select name from cities');
+	//$roles = cities::lists('name', 'id');
+	dd($results);
+	//return View::make("usuarios.cities", array("id" => $id,"name" => $name ));
+});

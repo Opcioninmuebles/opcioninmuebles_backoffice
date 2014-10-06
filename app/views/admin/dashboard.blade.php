@@ -203,7 +203,7 @@
                                 <a href="{{ route('account') }}"><span class="sidebar-text">Configuración de Cuenta</span></a>
                             </li>
                             <li>
-                                <a href="signup.html"><span class="sidebar-text">Registrar Usuarios</span></a>
+                                <a href="{{ route('registrer') }}"><span class="sidebar-text">Registrar Usuarios</span></a>
                             </li>
                             <li>
                                 <a href="password_forgot.html"><span class="sidebar-text">Recuperar Contraseña</span></a>
