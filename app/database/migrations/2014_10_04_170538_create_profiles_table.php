@@ -24,7 +24,7 @@ class CreateProfilesTable extends Migration {
 			$table->string('phone', 30);
 			$table->string('cellphone', 30);
 			$table->text('observations');
-			$table->foreign('user_id')->references('id')->on('user');			
+			$table->foreign('user_id')->references('id')->on('users');			
 			$table->timestamps();
 		});
 	}
