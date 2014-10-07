@@ -334,6 +334,7 @@
     <script src="{{ asset('assets/js/calendar.js') }}"></script>
     <script src="{{ asset('assets/js/application.js') }}"></script>
     <script src="{{ asset('assets/js/dashboard.js') }}"></script>
+   
     <!-- END  PAGE LEVEL SCRIPTS -->
 </body>
 

@@ -4,10 +4,9 @@
 <!--[if IE 8]>         <html class="no-js sidebar-large lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js sidebar-large"> <!--<![endif]-->
 
-<head>
-    <!-- BEGIN META SECTION -->
+<head>       
     <meta charset="utf-8">
-    <title>Login</title>
+    <title>Opción Inmuebles</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="" name="description" />
     <meta content="themes-lab" name="author" />
@@ -17,19 +16,14 @@
     <link href="{{ asset('assets/css/icons/icons.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/plugins.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/plugins/bootstrap-loading/lada.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/style.min.css') }}" rel="stylesheet">
-
-
     <link href="#" rel="stylesheet" id="theme-color">
     <!-- END  MANDATORY STYLE -->
     <!-- BEGIN PAGE LEVEL STYLE -->
-    <link href="{{ asset('assets/plugins/fullcalendar/fullcalendar.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/plugins/metrojs/metrojs.css') }}" rel="stylesheet">
-    
+    <link href="{{ asset('assets/css/animate-custom.css') }}" rel="stylesheet">
     <!-- END PAGE LEVEL STYLE -->
-
-	<link href="{{ asset('assets/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js') }}" rel="stylesheet">
-        
+    <script src="{{ asset('assets/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js') }}"></script>
 </head>
 
 <body class="login fade-in" data-page="login">
@@ -100,6 +94,8 @@
     <script src="{{ asset('assets/plugins/bootstrap-loading/lada.min.js') }}"></script>
     <script src="{{ asset('assets/js/account.js') }}"></script>
     <!-- END PAGE LEVEL SCRIPTS -->
+
+    <script>
 
 </body>
 
