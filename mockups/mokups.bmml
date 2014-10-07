@@ -1,0 +1,39 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1317" measuredH="682" mockupW="1293" mockupH="638">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="24" y="44" w="860" h="638" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Canvas" x="35" y="207" w="175" h="343" measuredW="100" measuredH="70" zOrder="1" locked="false" isInGroup="-1"/>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Canvas" x="35" y="120" w="834" h="87" measuredW="100" measuredH="70" zOrder="2" locked="false" isInGroup="-1"/>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Webcam" x="50" y="131" w="87" h="64" measuredW="177" measuredH="146" zOrder="3" locked="false" isInGroup="-1"/>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Accordion" x="40" y="210" w="163" h="325" measuredW="387" measuredH="483" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>11</selectedIndex>
+        <text>Dashboard%0ASucursales%0A-%20Crear%20Sucursal%0A-%20Modificar%0A-%20Consultar%0A-%20Eliminar%0AUsuarios%0A-%20Cuenta%20%28Admin%2C%20Agente%29%0A-%20Perfil%20%28Admin%2C%20Agente%29%0AAgente%20Comercial%0A-%20Crear%20%28Admin%29%0A-%20Consultar%20%28Admin%29%0A-%20Eliminar%20%28Admin%29%0A-%20Modificar%20%28Admin%29%0A-%20Asignaci%F3n%20%28Gerente%20de%20Zona%29%0ABandeja%20Comercial%20%28Admin%2C%20Gerente%20de%20zona%29%0AClientes%0A-%20Recepcion%0A-%20Asignacion%20de%20clientes%20%28%20a%20gerente%20de%20zona%29%20%28gerente%20general%29%0AListados%0A%20%20%20%20Listar%20clientes%20asignados%20a%20empleados%0A%20%20%20%20Listar%20total%20de%20clientes%20x%20sucursal%0A-Cerrar%20Sesi%F3n</text>
+        <verticalScrollbar>false</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::StickyNote" x="611" y="195" w="217" h="153" measuredW="109" measuredH="123" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Roles%0A-------%0AGerente%20General%20%28Admin%29%0AAgente%20comercial%0AGerente%20de%20Zona%0ARecepcionita%20%28Registra%20clientes%20manual%29%0A%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::StickyNote" x="884" y="100" w="433" h="435" measuredW="109" measuredH="123" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>1-%20Cliente%20llama%0A2-%20Registran%20al%20cliente%0A3-%20Se%20contacta%20al%20cliente%20%0A%20%20%20%20%20%20%28Estados%3A%20%0A%20%20%20%20%20%20%20-%20lngresado%20%28Recepcionista%29%2C%20%0A%20%20%20%20%20%20%20si%20tiene%20credito%20hipotecario%20se%20lo%20deja%20ahi%0A%20%20%20%20%20%20%20si%20tiene%20efvo%20se%20lo%20asigna%20al%20gerente%20gral.%0A%20%20%20%20%20%20%20%20%20-%20Asignado%20%28Recepcionista%29%0A%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20el%20gerente%20general%20administra%20el%20cliente%0A%20%20%20%20%20%20%20%20%20%20%20%20%20-%20se%20lo%20envia%20al%20gerente%20de%20zona%20y%20cambia%20de%20estado%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20a%20cliente%20asignado%0A%20%20%20%20%0A%20%20%20%20%20%20%20el%20gerente%20de%20zona%20tiene%205%20o%206%20agente%20comercial%20y%20se%20lo%20asigna%0A%20%20%20%20%20%20%20%20%20%20al%20que%20corresponde.%20y%20cambia%20de%20estado%20a%20%0A%20%20%20%20%20%20%20%20%20%20%22asignacion%20comercial%22%0A%20%20%20%20%20%0A%20%20%20%20%20%20%20el%20comercial%20lo%20llama%20e%20incia%20la%20negociacion%0A%20%20%20%20%20%20%20%20%20el%20agente%20cambia%20de%20estado%20a%20%22en%20negociaci%F3n%22%20%0A%20%0A%20%20%20%20%20%20el%20cliente%20compra%20el%20inmueble%20o%20no%20compra%0A%20%20%20%20%20%20%20%20%20%20%20%20si%20compra%20lo%20mando%20a%20una%20tabla%20de%20compradores%20y%20si%20no%20lo%20mando%20%0A%20%20%20%20%20%20%20%20%20%20%20%20a%20una%20tabla%20de%20no%20compradores.%0A%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::StickyNote" x="899" y="550" w="-1" h="-1" measuredW="109" measuredH="123" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Colocar%20en%20el%20filtro%20de%20la%20home%20el%20codigo%20de%20inmueble</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::StickyNote" x="1077" y="559" w="-1" h="-1" measuredW="109" measuredH="123" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Pensar%20Slogan</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
