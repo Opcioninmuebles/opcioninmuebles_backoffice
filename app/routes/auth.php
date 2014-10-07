@@ -12,3 +12,6 @@ Route::get('lockscreen', ['as' => 'lockscreen', 'uses' => 'AuthController@locksc
 Route::post('unlockscreen', ['as' => 'unlockscreen', 'uses' => 'AuthController@unlockscreen']);
 
 Route::get('logout', ['as' => 'logout', 'uses' => 'AuthController@logout']);
+
+Route::get('admin/customers/register', ['as' => 'register', 'uses' => 'CustomersController@register']);
+Route::post('admin/customers/register', ['as' => 'update_register', 'uses' => 'CustomersController@updateRegister']);
