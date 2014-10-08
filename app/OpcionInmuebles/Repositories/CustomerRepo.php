@@ -14,4 +14,25 @@ class CustomerRepo extends BaseRepo {
         $customer = new Customer();
         return $customer;
     }
+    
+    public function findLatest($take = 10)
+    {
+    	//esto es lo que se llama carga ambiciosa y permite obtener todos los datos de una
+    	//return  Category::with('candidates', 'candidate.user')->get();
+    	$customers = Customer::all();
+    	
+    		$customers = new Customer();
+    	
+    	return $customers;
+
+    	 /*Category::with([
+    			'candidates' => function($q) use ($take) {
+    				$q->take($take);
+    				$q->orderBy('created_at', 'DESC');
+    			},
+    			'candidates.user'
+    					])->get();
+    
+    */
+    }
 } 

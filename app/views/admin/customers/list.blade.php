@@ -35,13 +35,15 @@
 				 										</tr>
 				 									</thead>
 				 									<tbody>
-				 										@foreach($customers as $customer)
+				 									 	{{dd($latest_customers)}}
+				 										@foreach($latest_customers as $customer)
 				 										<tr>
 				 											<td>$customer->numcli</td>
 				 											<td>$customer->name</td>
 				 											<td>$customer->lastname</td>
 				 											<td>$customer->email</td>				 											
 				 										</tr>
+				 										@endforeach
 				 									</tbody>
 				 								</table>
 											</div>

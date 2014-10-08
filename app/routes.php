@@ -15,9 +15,7 @@ Route::get('/login', [ 'as' => 'login', 'uses' => 'AuthController@index' ] );
 
 Route::post('login', ['as' => 'login', 'uses' => 'AuthController@login']);
 
-Route::get('admin/users/account', ['as' => 'account', 'uses' => 'UsersController@account']);
-//Actualizar usuario
-Route::put('admin/users/account', ['as' => 'update_account', 'uses' => 'UsersController@updateAccount']);
+
 
 //Formularios
 //si el usuario no esta conectado impido el acceso a las rutas

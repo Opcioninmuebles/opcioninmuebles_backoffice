@@ -48,7 +48,7 @@
 			<li><a href="index.html#"><i class="glyph-icon flaticon-ui-elements2"></i><span
 					class="sidebar-text">Clientes</span><span class="fa arrow"></span></a>
 				<ul class="submenu collapse">
-					<li><a href="{{ route('register') }}"><span class="sidebar-text">Recepción</span></a>
+					<li><a href="{{ route('list_customers') }}"><span class="sidebar-text">Recepción</span></a>
 					</li>
 					<li><a href="animations.html"><span class="sidebar-text">Asignacion
 								de clientes</span></a></li>

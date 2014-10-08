@@ -25,7 +25,7 @@ class CustomersController extends \BaseController {
 		$customer = $this->customerRepo->newCustomer();
 		return \View::make('admin/customers/register', compact('customer'));
 	}
-	 
+
 	public function updateRegister()
 	{
 		$customer = $this->customerRepo->newCustomer();
@@ -45,4 +45,12 @@ class CustomersController extends \BaseController {
 		//lleno y muestra los errores que no paso la validacion.
 		//return  Redirect::back()->withInput()->withErrors($manager->getErrors());
 	}
+	
+	public function index()
+	{	
+		$latest_customers = $this->customerRepo->findLatest();
+	
+		return View::make('admin.customers.list', compact('latest_customers'));
+	}
+	
 }
