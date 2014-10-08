@@ -2,4 +2,5 @@
 
 class Customer extends \Eloquent {
 	protected $fillable = [];
+	protected $table = 'customers';
 }

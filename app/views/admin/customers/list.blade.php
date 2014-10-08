@@ -34,16 +34,8 @@
 				 											<td>Email</td>
 				 										</tr>
 				 									</thead>
-				 									<tbody>
-				 									 	{{dd($latest_customers)}}
-				 										@foreach($latest_customers as $customer)
-				 										<tr>
-				 											<td>$customer->numcli</td>
-				 											<td>$customer->name</td>
-				 											<td>$customer->lastname</td>
-				 											<td>$customer->email</td>				 											
-				 										</tr>
-				 										@endforeach
+				 									<tbody>				 								
+				 									
 				 									</tbody>
 				 								</table>
 											</div>

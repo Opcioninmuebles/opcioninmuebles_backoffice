@@ -21,7 +21,6 @@ class CustomerRepo extends BaseRepo {
     	//return  Category::with('candidates', 'candidate.user')->get();
     	$customers = Customer::all();
     	
-    		$customers = new Customer();
     	
     	return $customers;
 

@@ -49,7 +49,7 @@ class CustomersController extends \BaseController {
 	public function index()
 	{	
 		$latest_customers = $this->customerRepo->findLatest();
-	
+
 		return View::make('admin.customers.list', compact('latest_customers'));
 	}
 	
